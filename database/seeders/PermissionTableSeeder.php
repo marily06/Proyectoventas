@@ -14,8 +14,8 @@ class PermissionTableSeeder extends Seeder
      */
     public function run()
     {
-
-
+    
+        DB::statement('SET FOREIGN_KEY_CHECKS=0');
         Permission::truncate();
 
         Permission::firstOrCreate(['name' => 'Todas las opciones menu']);
@@ -129,6 +129,8 @@ class PermissionTableSeeder extends Seeder
         Permission::firstOrCreate(['name' => 'Eliminar Venta Estados']);
 
         Permission::firstOrCreate(['name' => 'Anular venta']);
+
+        DB::statement('SET FOREIGN_KEY_CHECKS=1');
 
 
 

@@ -3,13 +3,13 @@
     <i class="fa fa-eye"></i>
 </a>
 
-@if($id!=\App\Models\Cliente::NEGOCIO_MISMO && $id!=\App\Models\Cliente::CF)
+@if($id!=\App\Models\Cliente::CF)
 <a href="{{ route('clientes.edit', $id) }}" class='btn btn-info btn-xs' data-toggle="tooltip" title="Editar">
     <i class="fa fa-edit"></i>
 </a>
 @endif
 
-@if($id!=\App\Models\Cliente::NEGOCIO_MISMO && $id!=\App\Models\Cliente::CF)
+@if($id!=\App\Models\Cliente::CF)
 <span data-toggle="tooltip" title="Eliminar">
     <a href="#modal-delete-{{$id}}" data-toggle="modal" data-keyboard="true" class='btn btn-danger btn-xs'>
         <i class="fa fa-trash-alt"></i>

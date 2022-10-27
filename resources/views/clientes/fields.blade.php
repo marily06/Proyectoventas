@@ -4,21 +4,12 @@
     $readOnly = '';
 
     if(isset($cliente)){
-        if ($cliente->id==\App\Models\Cliente::CF || $cliente->id==\App\Models\Cliente::NEGOCIO_MISMO){
+        if ($cliente->id==\App\Models\Cliente::CF){
             $readOnly='readonly';
         }
     }
 @endphp
 
-@if(isset($cliente) && ($cliente->id==\App\Models\Cliente::NEGOCIO_MISMO))
-    <div class="form-group col-sm-12">
-        <h2>
-            <span class="badge badge-warning">
-                Este cliente se utiliza para transacciones internas
-            </span>
-        </h2>
-    </div>
-@endif
 
 <!-- Nit Field -->
 <div class="form-group col-sm-3">

@@ -57,7 +57,7 @@
 
                 console.log('respuesta ajax:',data);
 
-                var option = new Option(data.full_name, data.id);
+                var option = new Option(data.nombre_completo, data.id);
                 option.selected = true;
 
                 //quita la opción seleccionada del select objetivo
@@ -65,13 +65,13 @@
                 //Cambia la opción del select objetivo por la creada
                 select2target.empty().append(option).trigger("change");
 
-                
-                $('#modal-form-clientes').modal('hide'); 
+
+                $('#modal-form-clientes').modal('hide');
 
                 iziTs(msg);
 
                 $('#btnSubmitFormClientes').button('reset');
-                 
+
                 $("#form-modal-clientes")[0].reset();
             })
             .catch(error => {
