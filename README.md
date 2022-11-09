@@ -56,7 +56,7 @@
 ### Puedes ingresar por el navegador con  http://ventas.local/
 
 #### Credenciales de acceso
-    Usuario : dev
+    Usuario : admin
     Password : admin
  
 
